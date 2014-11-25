@@ -97,4 +97,15 @@ function GameBoard(board) {
 		this.board.closePath();
 		this.board.fill();
 	}
+	
+	/*
+	* Description : Draw a player on the board
+	* player : an object Player
+	* Return : none
+	*/
+	this.drawPlayer = function(player) {
+		if(player.fixedImage != false) {
+			this.board.drawImage(player.fixedImage, player.xPosition * this.widthBlock, player.yPosition * this.heightBlock);
+		}
+	}
 } 
