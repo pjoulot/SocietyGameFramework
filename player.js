@@ -1,16 +1,23 @@
 /*
 * Description : This object represent a player
+* objectName : the name of the present object (type)
+* order : order defines when the player can play (his turn)
+* bot : takes the value "true" if this payer is controlled by a computer
+* pnj : takes the value "true" if this payer is a PNJ (is not playable and is a sort of part of the game)
 * xPosition : it is the line on the board occupied by the player
 * yPosition : it is the column on the board occupied by the player
-* order : order defines when the player can play (his turn)
+
 * fixedImage : the image of the player if it is not a sprite
 * spriteImage : the sprite of the player if it is not a fixed image
 * Return : none
 */
 function Player() {
 	// Non-graphic informations
+	this.objectName = "Player";
 	this.order;
 	this.name;
+	this.bot = false;
+	this.pnj = false;
 	// Grphic informations
 	this.xPosition = 0;
 	this.yPosition = 0;
